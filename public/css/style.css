@@ -1,0 +1,32 @@
+
+.navbar{
+    background-color: #e5dcda !important;
+    font-weight: bolder;
+    color: black;
+}
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+    padding: 1rem !important;
+
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    /* padding: 1rem !important; */
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-text {
+    font-weight: 400 !important;
+}
+.listing-link{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+}
+.faculty-detail{
+    width: 40rem !important ;
+}

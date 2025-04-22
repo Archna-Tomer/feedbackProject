@@ -1,0 +1,27 @@
+<% layout('layout/boilerplate') -%>
+
+<body>
+   
+    <form action="/faculty/new" method="get">
+       
+    </form>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+   <% for(dept of department){%>
+    <a href="/dept/<%= dept._id %>" class="listing-link">
+        <div class="card col listing-card">
+            <img src="<%= dept.image %>" class="card-img-top" style="height: 16rem;" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <b><%= dept.name %></b>
+                </p>
+                <form action="/dept/<%= dept._id %>?_method=DELETE" method="post"><button class="btn btn-danger">Delete</button></form>
+            </div>
+        </div>
+      
+    </a>
+
+    <% } %>
+</div>
+  
+    
+</body>

@@ -1,0 +1,34 @@
+<% layout('layout/boilerplate') -%>
+
+    <body>
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1">
+            <% if (department.faculty && department.faculty.length> 0) { %>
+                <% for (let faculty of department.faculty) { %>
+                    <a href="/faculty/<%= faculty._id %>">
+                   
+                        <div class="card col  ">
+                            <img src="<%= faculty.image %>" alt="" style="height: 15rem;">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    
+                                        <%= faculty.name %>
+                                 
+                                <form action="/dept/<%= department._id %>/faculty/<%= faculty._id %>?_method=DELETE"
+                                    method="post">
+                                    <button class="btn btn-dark">DELETE</button>
+                                </form>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                   
+                  
+
+                    <% } %>
+                        <% } else { %>
+                            <h3>There is no faculty for this department</h3>
+                            <% } %>
+        </div>
+
+
+    </body>

@@ -1,0 +1,27 @@
+<% layout('layout/boilerplate') -%>
+
+<body>
+    
+    <div class="row mt-2 ">
+        <div class="col-6 offset-3">
+            <h3 class="mb-3">Add New Department</h3>
+    <form action="/dept/new" method="post" novalidate class="needs-validation">
+        <div class="mb-3">
+        <label for="" class="form-label">Code:</label>
+    <input type="number" name="code" placeholder="enter code" class="form-control">
+</div>
+<div class="mb-3">
+    <label for="" class="form-label">Name:</label>
+    <input type="text" placeholder="enter department name" name="name" class="form-control">
+</div>
+<div class="mb-3">
+    <label for="" class="form-label">Image:</label>
+    <input type="text" placeholder="enter Image url" name="image" class="form-control">
+</div>
+
+
+    <button class="btn btn-success">Add</button>
+</form>
+</div>
+</div>
+</body>

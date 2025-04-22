@@ -1,0 +1,33 @@
+<% layout('layout/boilerplate') -%>
+
+<body>
+    
+    <div class="row mt-2 ">
+        <div class="col-6 offset-3">
+            <h3 class="mb-3">Add New Faculty</h3>
+    <form action="/faculty/new" method="post" novalidate class="needs-validation">
+        <div class="mb-3">
+        <label for="" class="form-label">Name:</label>
+    <input type="text" name="name" placeholder="enter faculty name" class="form-control">
+</div>
+<div class="mb-3">
+    <label for="" class="form-label">department:</label>
+    <input type="text" placeholder="enter department" name="department" class="form-control">
+</div>
+<div class="mb-3">
+    <label for="" class="form-label">Email:</label>
+    <input type="email" placeholder="enter email" name="email" class="form-control">
+</div>
+<div class="mb-3">
+    <label for="" class="form-label">Specialization:</label>
+    <input type="text" placeholder="Enter your specialization" class="form-control" name="specialization">
+</div>
+<div class="mb-3">
+    <label for="" class="form-label">Image</label>
+    <input type="text" placeholder="Enter imageUrl" class="form-control" name="image">
+</div>
+    <button class="btn btn-success">Submit</button>
+</form>
+</div>
+</div>
+</body>

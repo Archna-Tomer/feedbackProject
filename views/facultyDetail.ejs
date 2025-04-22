@@ -1,0 +1,55 @@
+<% layout('layout/boilerplate') -%>
+
+    <body>
+        <div class="row">
+
+            <div class="card col-6 offset-3 faculty-detail">
+                <h2> <b>
+                        <%= faculty.department.name %>
+                    </b> </h2>
+
+                <img src="<%= faculty.image %>" alt="" style="height: 25rem; border-radius: 50%;">
+                <div class="card-body">
+                    <p class="card-text">
+                    <ul>
+                        <li>
+                            <%= faculty.name %>
+                        </li>
+                        <li>
+                            <%= faculty.email %>
+                        </li>
+                        <li>
+                            <%= faculty.specialization %>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="d-flex">
+                    <div class="col-2 mb-2">
+                        <form action="">
+                            <button class="btn btn-primary">Edit</button>
+                        </form>
+                    </div>
+                    <div class="col-2 mb-2">
+                        <form action="">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+                <form action="/feedback/faculty/<%= faculty._id %>" method="get">
+             <button class="btn btn-success">Add Feedback</button> </form>
+
+            </div>
+           <div class="col-6 offset-3">
+           <h4>Overall Ratings: <%= avgRatings %></h4>
+           </div>
+            
+
+        </div>
+
+
+       
+
+
+
+    </body>

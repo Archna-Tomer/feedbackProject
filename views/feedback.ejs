@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3><%= faculty.name %></h3>
+    <form action="/feedback/faculty/<%= faculty._id %>" method="post">
+        <table border="1">
+            <tr>
+                <th>Criteria</th>
+                <th>Great</th>
+                <th>Very Good</th>
+                <th>Good</th>
+                <th>Average</th>
+                <th>Poor</th>
+            </tr>
+            <% let criteria=[
+                {key:"handlingStudents",label:"Handling Students"},
+                {key:"discipline",label:"Ability to uphold discipline,sociability and cooperation"},
+                {key:"livelyClass",label:"Ability to make class lively"},
+                {key:"availability",label:"Availability of Faculty"},
+                {key:"clarity",label:"Ability to teach in clear and understandable way"},
+                {key:"contentDelivery",label:"Content Delivery"},
+                {key:"contentRelevance",label:"SIgnificance of learning content to students,future aspirations"},
+                {key:"presentation",label:"FAculty's presentation ability compared to other faculties"},
+                {key:"overallTeaching",label:"Overall teaching ability"},
+                {key:"overallRating",label:"Overall Rating"},
+            ];
+             %>
+             <% criteria.forEach(criterion=>{ %>
+                <tr>
+                    <td><%=criterion.label %></td>
+                  <%  for(let i=5;i>=0;i--){ %>
+                        <td> <input type="radio" name="ratings[<%=criterion.key %>]" value="<%=i%>">  </td>
+                   <% } %>
+                    </tr>
+         <%    }) %>
+        </table>
+        <button class="btn">Submit</button>
+
+    </form>
+   
+    
+</body>
+</html>
